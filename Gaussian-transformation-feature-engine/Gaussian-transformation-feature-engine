@@ -1,0 +1,4 @@
+Gaussian Transformation
+Some machine learning models like linear and logistic regression assume that the variables are normally distributed. Often, variables are not normally distributed, but, transforming the variables to map their distribution to a Gaussian distribution may, and often does, boost the performance of the machine learning algorithm.
+
+If a variable is not normally distributed, it is often possible to find a mathematical transformation to normalise its distribution.
