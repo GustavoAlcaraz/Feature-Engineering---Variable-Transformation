@@ -1,0 +1,42 @@
+## Gaussian Transformation
+
+Some machine learning models like linear and logistic regression assume that the variables are normally distributed. Often, variables are not normally distributed, but, transforming the variables to map their distribution to a Gaussian distribution may, and often does, boost the performance of the machine learning algorithm.
+
+If a variable is not normally distributed, it is often  possible to find a mathematical transformation to normalise its distribution.
+
+
+### How can we transform variables so that they follow a normal distribution?
+
+The most commonly used methods to transform variables are:
+
+- Logarithmic transformation - np.log(X)
+- Reciprocal transformation - 1 / X
+- Square root transformation - X**(1/2)
+- Exponential transformation (more general, you can use any exponent)
+- Box-Cox transformation
+- Yeo-Johnson transformation
+
+You can find the formulas for Box-Cox and Yeo-Johnson [here](https:
+//scikit-learn.org/stable/modules/preprocessing.html#mapping-to-a-gaussian-distribution)
+
+Briefly, the Box-Cox transformation is an adaptation of the exponential transformation, 
+scanning through various exponents, and it already represents the untransformed variable, 
+as well as the log transformed, reciprocal, square and cube root transformed, as the lambda 
+varies across the range of -5 to 5 (see formula or accompanying video, to understand this better). 
+So by doing Box-Cox transformation, in a way, we are evaluating all the other transformations 
+and choosing the best one. Box-Cox can only be applied to positive variables.
+
+Yeo-Johnson is a modification of the Box-Cox transformation so that it can be applied as well 
+to non-positive variables
+
+To read more about the **Box-Cox** transformation visit any of these links:
+- http://www.statisticshowto.com/box-cox-transformation/
+- http://www.itl.nist.gov/div898/handbook/eda/section3/eda336.htm
+- http://onlinestatbook.com/2/transformations/box-cox.html
+
+To read more about the Yeo-Johnson transformation follow this 
+[link](https://www.stat.umn.edu/arc/yjpower.pdf):
+
+## In this demo
+
+We will see how to implement variable transformations using NumPy.
